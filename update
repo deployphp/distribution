@@ -14,7 +14,7 @@ foreach ($manifest as $m) {
         run("git add dep");
         run("git commit -m 'Deployer $version'");
         run("git tag $version");
-        run("git reset --hard master");
+        run("git checkout master");
         run("git branch --delete --force dist");
     }
 }
