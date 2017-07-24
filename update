@@ -19,6 +19,8 @@ foreach ($manifest as $m) {
     }
 }
 
+run("git push --tags");
+
 function run($command) {
     echo "\n$ \033[0;32m$command\033[0m\n";
     exec($command, $output);
