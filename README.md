@@ -1,3 +1,9 @@
 # Deployer Distribution
 
-This package contains phar version of deployer with can be installed via composer.
+This package contains phar version of deployer which can be installed via composer.
+
+## Install
+
+```bash
+composer require deployer/dist
+```
