@@ -15,12 +15,12 @@ foreach ($manifest as $m) {
         run("git commit -m 'Deployer $version'");
         run("git tag $version");
         run("git reset --hard master");
-        run("git branch -D dist");
+        run("git branch --delete --force dist");
     }
 }
 
 function run($command) {
-    echo "$ \033[0;32m$command\033[0;32m\n";
+    echo "\n$ \033[0;32m$command\033[0m\n";
     exec($command, $output);
     echo implode("\n", $output);
 }
