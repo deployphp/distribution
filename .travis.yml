@@ -9,5 +9,7 @@ script:
   - git config user.email "travis@travis-ci.org"
   - git config user.name "Travis CI"
   - git remote add origin git@github.com:deployphp/distribution.git
+  - git fetch --tags
+  - git checkout -B master
   - git branch --set-upstream-to origin/master
   - php update
