@@ -9,8 +9,7 @@ before_script:
  - echo -e "$KEY_PRIVATE" > ~/.ssh/id_rsa
  - chmod 600 ~/.ssh/id_rsa*
  - eval `ssh-agent -s`
- - cat ~/.ssh/id_rsa
- - ssh-add ~/.ssh/id_rsa
+ - ssh-add
 
 script: 
   - git remote set-url origin git@github.com:deployphp/distribution.git
