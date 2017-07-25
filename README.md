@@ -1,11 +1,21 @@
 # Deployer Distribution
 
-This package contains phar version of deployer which can be installed via composer.
-
 [![Packagist](https://img.shields.io/packagist/v/deployer/dist.svg)](https://packagist.org/packages/deployer/dist)
+
+This package contains phar version of deployer which can be installed via composer.
 
 ## Install
 
-```bash
+```
 composer require deployer/dist
 ```
+
+## Usage
+
+```
+php vendor/bin/dep
+```
+
+## License 
+
+[MIT](https://github.com/deployphp/deployer/blob/master/LICENSE)
