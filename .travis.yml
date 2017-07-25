@@ -3,13 +3,15 @@ language: php
 php:
   - 7.0
 
+before_script:
+ - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+ - echo -e "$KEY_PUBLIC" > ~/.ssh/id_rsa.pub
+ - echo -e "$KEY_PRIVATE" > ~/.ssh/id_rsa
+ - chmod 600 ~/.ssh/id_rsa*
+ - eval `ssh-agent -s`
+ - ssh-add ~/.ssh/id_rsa
+
 script: 
-  - echo $KEY > ./travis-ci
-  - git config core.sshCommand "ssh -i ./travis-ci -F /dev/null"
-  - git config user.email "travis@travis-ci.org"
-  - git config user.name "Travis CI"
-  - git remote add origin git@github.com:deployphp/distribution.git
+  - git remote set-url origin git@github.com:deployphp/distribution.git
   - git fetch --tags
-  - git checkout -B master
-  - git branch --set-upstream-to origin/master
   - php update
