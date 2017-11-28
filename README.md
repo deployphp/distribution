@@ -7,7 +7,7 @@ This package contains phar version of deployer which can be installed via compos
 ## Install
 
 ```
-composer require deployer/dist
+composer require deployer/dist --dev
 ```
 
 ## Usage
