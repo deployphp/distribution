@@ -14,5 +14,8 @@
             "email": "anton@medv.io"
         }
     ],
-    "bin": ["dep"]
+    "bin": ["dep"],
+    "replace": {
+        "deployer/deployer": "self.version"
+    }
 }
