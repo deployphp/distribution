@@ -1,0 +1,4 @@
+/.git*          export-ignore
+/composer.json  export-ignore
+/README.md      export-ignore
+/update         export-ignore
