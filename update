@@ -10,9 +10,8 @@ foreach ($manifest as $m) {
     if (!in_array($version, $tags, true)) {
         run("git checkout -b dist");
         run("curl -LO $url");
-        run("mv deployer.phar dep");
-        run("chmod +x dep");
-        run("git add dep");
+        run("chmod +x deployer.phar");
+        run("git add deployer.phar");
         run("git commit -m 'Deployer $version'");
         run("git tag $version");
         run("git checkout master");
