@@ -14,7 +14,7 @@
             "email": "anton@medv.io"
         }
     ],
-    "bin": ["dep"],
+    "bin": ["deployer.phar"],
     "replace": {
         "deployer/deployer": "self.version"
     }

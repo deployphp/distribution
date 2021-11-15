@@ -11,8 +11,7 @@ foreach ($manifest as $m) {
         run("git checkout -b dist");
         run("curl -LO $url");
         run("chmod +x deployer.phar");
-        run("ln -s deployer.phar dep");
-        run("git add deployer.phar dep");
+        run("git add deployer.phar");
         run("git commit -m 'Deployer $version'");
         run("git tag $version");
         run("git checkout master");
