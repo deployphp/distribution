@@ -1,3 +1,10 @@
+
+> ---
+> 
+> The deployer/dist pacakge was merged into deployer/deployer package. Please, switch to [deployer/deployer](https://deployer.org/docs/7.x/installation).
+>
+> ---
+
 # Deployer Distribution
 
 [![Packagist](https://img.shields.io/packagist/v/deployer/dist.svg)](https://packagist.org/packages/deployer/dist)
